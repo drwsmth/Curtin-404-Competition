@@ -71,21 +71,21 @@ header img {
 .background {
 	z-index: 0;
 	background: url(Star%20Layer%20%231@1x.png) repeat 70% 75%;
-	-webkit-animation: zoom_1 1.4s cubic-bezier(0.230, 1.000, 0.320, 1.000) both, pulse_1 28s 1.31s ease-in-out infinite alternate ;
+	-webkit-animation: zoom_1 1.4s cubic-bezier(0.230, 1.000, 0.320, 1.000) both, pulse_1 28s 1.5s ease-in-out infinite alternate ;
   	-webkit-animation-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000), ease-in-out;
 	}
 	
 .background:before {
 	z-index: 1; 
 	background: url(Star%20Layer%20%232@1x.png) repeat 80% 85%;
-	-webkit-animation: zoom_2 1.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both, pulse_2 34s 1.32s ease-in-out infinite alternate;
+	-webkit-animation: zoom_2 1.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both, pulse_2 34s 1.5s ease-in-out infinite alternate;
   	-webkit-animation-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000), ease-in-out;
 	}
 	
 .background:after {
 	z-index: 2; 
 	background: url(Star%20Layer%20%233@1x.png) repeat 90% 95%;
-	-webkit-animation: zoom_3 1.8s cubic-bezier(0.230, 1.000, 0.320, 1.000) both, pulse_3 28s 1.33s ease-in-out infinite alternate;
+	-webkit-animation: zoom_3 1.8s cubic-bezier(0.230, 1.000, 0.320, 1.000) both, pulse_3 28s 1.5s ease-in-out infinite alternate;
   	-webkit-animation-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000), ease-in-out;
 	}
 
