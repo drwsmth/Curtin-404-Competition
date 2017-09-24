@@ -26,57 +26,68 @@ html {
 	-webkit-font-feature-settings: "kern";
 	-moz-font-feature-settings: "kern";
 	-moz-font-feature-settings: "kern=1";
+/* 	background: linear-gradient(rgba(0,0,10,1), rgba(37,36,77,1)) fixed; */
+	animation: spaceout 1.4s both;
 }
 
 body {
-	font-family: 'Lato', sans-serif;
-	background-color: rgb(10,15,12);
-	z-index: 1;
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
 	color: white;
+	line-height: 1.5em;
 	}
 	
 .container {
-	width: 60%;
-	margin: 4em auto auto auto;
-	padding: 24px;
-	-webkit-animation: pop 1.2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
-  	animation: pop 1s ease-in-out both;
+	width: 600px;
+	margin: 15vh auto auto auto;
+	padding: 48px;
+/* 	background-color: rgba(0,0,0,0.4); */
+/* 	-webkit-backdrop-filter: blur(5px) brightness(150%) contrast(80%); */
+	border-radius: 16px;
+	-webkit-animation: starzoom_1 1.3s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+  	animation: starzoom_1 1s ease-in-out both;
   	-webkit-animation-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000);
 	}
 
-.background {
+.background,
+.background:before,
+.background:after {
 	position: fixed;
-	background-image: url(Star%20Layer%20%231@1x.png);
-	background-attachment: fixed;
 	top: 0; left: 0; right: 0; bottom: 0;
-	z-index: -1;
-	-webkit-animation: pop 1.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
-  	-webkit-animation-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000);
+}
+.background:before,
+.background:after {
+	content:"";
+	width: 100%;
+	height: 100%;
+}
 
+header {
+	text-align: left;
+}
+
+header img {
+	margin-bottom: 1em;
+}
+
+.background {
+	z-index: 0;
+	background: url(Star%20Layer%20%231@1x.png) repeat 70% 75%;
+	-webkit-animation: starzoom_1 1.7s cubic-bezier(0.230, 1.000, 0.320, 1.000) both, starmotion_1 28s 1.3s ease-in-out infinite alternate ;
+  	-webkit-animation-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000), ease-in-out;
 	}
 	
 .background:before {
-	content:"";
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	background-image: url(Star%20Layer%20%232@1x.png);
-	top: 0; left: 0; right: 0; bottom: 0;
 	z-index: 1; 
-	-webkit-animation: pop2 1.3s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
-  	-webkit-animation-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000);
+	background: url(Star%20Layer%20%232@1x.png) repeat 80% 85%;
+	-webkit-animation: starzoom_2 1.4s cubic-bezier(0.230, 1.000, 0.320, 1.000) both, starmotion_2 34s 1.3s ease-in-out infinite alternate;
+  	-webkit-animation-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000), ease-in-out;
 	}
 	
 .background:after {
-	content:"";
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	background-image: url(Star%20Layer%20%233@1x.png);
-	top: 0; left: 0; right: 0; bottom: 0;
-	z-index: 1; 
-	-webkit-animation: pop3 1.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
-  	-webkit-animation-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000);
+	z-index: 2; 
+	background: url(Star%20Layer%20%233@1x.png) repeat 90% 95%;
+	-webkit-animation: starzoom_3 1.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both, starmotion_3 28s 1.3s ease-in-out infinite alternate;
+  	-webkit-animation-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000), ease-in-out;
 	}
 
 	
@@ -84,18 +95,18 @@ h1 {
 	font-size: 10em;
 	font-weight: 200;
 	line-height: 1.0em;
-	color: var(--innovaqua); }
+	color: rgba(172,194,55,1); }
 	
 h2 {
 	font-size: 1.8em;
-	font-weight: 400;
-	line-height: 1.6em;
-	color: var(--innovaqua); }
+	font-weight: 600;
+	line-height: 1.6em; }
 	
 h3 {
 	font-size: 1.4em;
-	font-weight: 600;
-	line-height: 1.5em; }
+	font-weight: 400;
+	line-height: 1.4em;
+	color: rgba(255,255,255,0.7) }
 	
 h4 {
 	font-size: 1.2em;
@@ -104,11 +115,12 @@ h4 {
 	color: var(--innovaqua); }
 	
 a {
-	color: var(--innovpurple);
+	color: rgba(55,192,198,1);
 }
 hr {
-	margin-bottom: 8em;
-	border: 1px solid var(--innovgrey); }
+	border: 1px solid rgba(55,192,198,1);
+	width: 100%;
+	margin: 1em auto 1em auto; }
 
 .hero { }
 
@@ -117,7 +129,7 @@ hr {
 	
 .info_block {
 	width: 100%;
-	border-top: 2px solid var(--innovgrey);
+	border-top: 2px solid rgba(79,78,161,1);
 	margin: 8px; }
 	
 .info_block:first-child {
@@ -129,9 +141,10 @@ hr {
 footer {
 	position: fixed;
 	min-height: 44px;
+	padding: 12px;
 	color: white;
-	background-color: rgba(0,0,0,0.9);
 	text-align: center;
+	background-color: rgba(0,0,0,0.9);
 	width: 100%;
 	bottom: 0; }
 	
@@ -141,24 +154,57 @@ footer {
   100% {opacity:1;} 
 }
 
-@keyframes pop { 
+@keyframes spaceout { 
+  0% {background-color: black;}
+  100% {background-color: rgba(79,78,161,1);} 
+}
+
+@keyframes starzoom_1 { 
   0% {opacity:0; transform: scale(0.0);}
   100% {opacity:1; transform: scale(1);} 
 }
 
-@keyframes pop2 { 
+@keyframes starzoom_2 { 
   0% {opacity:0; transform: scale(-0.5);}
   100% {opacity:1; transform: scale(1);} 
 }
 
-@keyframes pop3 { 
+@keyframes starzoom_3 { 
   0% {opacity:0; transform: scale(-1);}
   100% {opacity:1; transform: scale(1);} 
 }
 
+@keyframes starmotion_1 { 
+  0% {opacity:1; transform: scale(1);}
+  50% {opacity:0.9; transform: scale(0.99);}
+  100% {opacity:0.7; transform: scale(1);} 
+}
+
+@keyframes starmotion_2 { 
+  0% {opacity:1; transform: scale(1);}
+  50% {opacity:0.8; transform: scale(0.95);}
+  100% {opacity:0.75; transform: scale(1);} 
+}
+
+@keyframes starmotion_3 { 
+  0% {opacity:1; transform: scale(1);}
+  50% {opacity:0.9; transform: scale(0.85);}
+  100% {opacity:1; transform: scale(0.9);} 
+}
+
+@media screen and (max-width: 768px) {
+
+.container {
+	width: 80%;
+    }
+}
+
 @media (prefers-reduced-motion) {
   /* adjust motion of 'transition' or 'animation' properties */
-	.container {
+	.container,
+	.background,
+	.background:before,
+	.background:after {
 	-webkit-animation: fade 1000ms ease-in-out both;
   	animation: fade 1000ms ease-in-out both; }
 }

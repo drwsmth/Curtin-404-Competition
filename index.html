@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>404 — Not Found</title>
 		<link rel="stylesheet" type="text/css" href="reset.css"/>
 		<link rel="stylesheet" type="text/css" href="style.css"/>
@@ -11,25 +12,18 @@
 		<div class="background"></div>
 		<div class="container">
 			<section class="hero">
-				<header><h1>404</h1></header>
-				<h2>This page couldn’t be found.</h2>
-				<h3>Our telescopes probably can’t help with this one.</h3>
+				<header>
+					<picture>
+						<source srcset="assets/sad.png, assets/sad@2x.png 2x, assets/sad@3x.png 3x">
+						<source type="image/webp" srcset="assets/sad.webp, assets/sad@2x.webp 2x, assets/sad@3x.webp 3x">
+						<img src="assets/sad@3x.png" alt="404">
+					<picture>	
+					<h2>This page cannot be found.</h2>
+					<h3>Unfortunately, our telescopes won't be much help with this one.</h3>		
+				</header>
 				<hr noshade>
-			</section>
-			<section class="information">
-				<header><h3>Need more information?</h3></header>
-				<div class="info_group">
-					<div class="info_block">
-						<h4>Info</h4>
-						<p>Lorem ipsum si dor amet.</p>
-					</div>
-					<div class="info_block">
-						<h4>Links</h4>
-						<a href="">Facebook</a>
-						<a href="">Twitter</a>
-						<a href="">LinkedIn</a>
-					</div>
-				</div>
+				<p>It's not just astronomy we specialise in! In the meantime, check our <a href="https://twitter.com/ICentral_Au">Twitter</a> or <a href="https://www.youtube.com/channel/UC-vGDiwb5hsXrCqBkY6oMxg">Youtube Channel</a>
+ to see how we're utilising leading edge technology in data analytics, machine learning (AI), VR, drones, sensors and more.<p>	
 			</section>
 		</div>
 	</body>
