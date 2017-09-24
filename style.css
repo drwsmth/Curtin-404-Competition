@@ -44,7 +44,7 @@ header img {
 	
 .container {
 	width: 600px;
-	margin: auto auto auto auto;
+	margin: 4em auto auto auto;
 	padding: 48px;
 	border-radius: 16px;
 	-webkit-animation: zoom_1 1.3s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
