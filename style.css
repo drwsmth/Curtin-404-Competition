@@ -143,7 +143,7 @@ footer {
 
 @keyframes background_fade { 
   0% {background-color: black;}
-  100% {background-color: rgba(79,78,161,1);} 
+  100% {background-color: green;} 
 }
 
 @keyframes zoom_1 { 
