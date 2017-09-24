@@ -1,0 +1,164 @@
+/* Experimental Feature » Defining color scheme with CS4 variables. */
+
+:root {
+	--innovpurple: rgba(79,78,161,1);
+	--innovaqua: rgba(55,192,198,1);
+	--innovlime: rgba(172,194,55,1);
+	--innovblue: rgba(4,159,218,1);
+	--innovgrey: rgba(88,89,91,1);
+	--innovgradient: rgba(79,78,161,1);
+}
+
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	font-feature-settings: "kern";
+	-webkit-font-feature-settings: "kern";
+	-moz-font-feature-settings: "kern";
+	-moz-font-feature-settings: "kern=1";
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	background-color: rgb(10,15,12);
+	z-index: 1;
+	color: white;
+	}
+	
+.container {
+	width: 60%;
+	margin: 4em auto auto auto;
+	padding: 24px;
+	-webkit-animation: pop 1.2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+  	animation: pop 1s ease-in-out both;
+  	-webkit-animation-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000);
+	}
+
+.background {
+	position: fixed;
+	background-image: url(Star%20Layer%20%231@1x.png);
+	background-attachment: fixed;
+	top: 0; left: 0; right: 0; bottom: 0;
+	z-index: -1;
+	-webkit-animation: pop 1.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+  	-webkit-animation-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000);
+
+	}
+	
+.background:before {
+	content:"";
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-image: url(Star%20Layer%20%232@1x.png);
+	top: 0; left: 0; right: 0; bottom: 0;
+	z-index: 1; 
+	-webkit-animation: pop2 1.3s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+  	-webkit-animation-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000);
+	}
+	
+.background:after {
+	content:"";
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-image: url(Star%20Layer%20%233@1x.png);
+	top: 0; left: 0; right: 0; bottom: 0;
+	z-index: 1; 
+	-webkit-animation: pop3 1.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+  	-webkit-animation-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000);
+	}
+
+	
+h1 {
+	font-size: 10em;
+	font-weight: 200;
+	line-height: 1.0em;
+	color: var(--innovaqua); }
+	
+h2 {
+	font-size: 1.8em;
+	font-weight: 400;
+	line-height: 1.6em;
+	color: var(--innovaqua); }
+	
+h3 {
+	font-size: 1.4em;
+	font-weight: 600;
+	line-height: 1.5em; }
+	
+h4 {
+	font-size: 1.2em;
+	font-weight: 600;
+	line-height: 1.5em;
+	color: var(--innovaqua); }
+	
+a {
+	color: var(--innovpurple);
+}
+hr {
+	margin-bottom: 8em;
+	border: 1px solid var(--innovgrey); }
+
+.hero { }
+
+.info_group {
+	display: flex; }
+	
+.info_block {
+	width: 100%;
+	border-top: 2px solid var(--innovgrey);
+	margin: 8px; }
+	
+.info_block:first-child {
+	margin-left: 0; }
+	
+.info_block:last-child {
+	margin-right: 0; }
+	
+footer {
+	position: fixed;
+	min-height: 44px;
+	color: white;
+	background-color: rgba(0,0,0,0.9);
+	text-align: center;
+	width: 100%;
+	bottom: 0; }
+	
+
+@keyframes fade { 
+  0% {opacity:0;}
+  100% {opacity:1;} 
+}
+
+@keyframes pop { 
+  0% {opacity:0; transform: scale(0.0);}
+  100% {opacity:1; transform: scale(1);} 
+}
+
+@keyframes pop2 { 
+  0% {opacity:0; transform: scale(-0.5);}
+  100% {opacity:1; transform: scale(1);} 
+}
+
+@keyframes pop3 { 
+  0% {opacity:0; transform: scale(-1);}
+  100% {opacity:1; transform: scale(1);} 
+}
+
+@media (prefers-reduced-motion) {
+  /* adjust motion of 'transition' or 'animation' properties */
+	.container {
+	-webkit-animation: fade 1000ms ease-in-out both;
+  	animation: fade 1000ms ease-in-out both; }
+}
