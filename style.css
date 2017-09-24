@@ -198,18 +198,18 @@ only screen and ( min-resolution: 1.25dppx)
 	
 .background {
 	background: url(Star%20Layer%20%231@2x.png) repeat 70% 75%;
-	background-size: 50%;
+	background-size: 60%;
 	}
 	
 .background:before {
 	background: url(Star%20Layer%20%232@2x.png) repeat 80% 85%;
-	background-size: 50%;
+	background-size: 60%;
 
 	}
 	
 .background:after {
 	background: url(Star%20Layer%20%233@2x.png) repeat 90% 95%;
-	background-size: 50%;
+	background-size: 60%;
 	}
 }
 
@@ -224,17 +224,17 @@ only screen and ( min-resolution: 1.25dppx)
 	
 .background {
 	background: url(Star%20Layer%20%231@3x.png) repeat 70% 75%;
-	background-size: 33.33%;
+	background-size: 40%;
 	}
 	
 .background:before {
 	background: url(Star%20Layer%20%232@3x.png) repeat 80% 85%;
-	background-size: 33.33%;
+	background-size: 40%;
 	}
 	
 .background:after {
 	background: url(Star%20Layer%20%233@3x.png) repeat 90% 95%;
-	background-size: 33.33%;
+	background-size: 40%;
 	}
 }
 
