@@ -1,0 +1,452 @@
+/* Experimental Feature » Defining color scheme with CS4 variables. */
+
+:root {
+	--innovpurple: rgba(79, 78, 161, 1);
+	--innovaqua: rgba(55, 192, 198, 1);
+	--innovlime: rgba(172, 194, 55, 1);
+	--innovblue: rgba(4, 159, 218, 1);
+	--innovgrey: rgba(88, 89, 91, 1);
+	--innovgradient: rgba(79, 78, 161, 1);
+}
+
+
+/* Styling begins below. */
+
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	font-feature-settings: "kern";
+	-webkit-font-feature-settings: "kern";
+	-moz-font-feature-settings: "kern";
+	-moz-font-feature-settings: "kern=1";
+	-webkit-animation: background_fade 1.4s both;
+	-moz-animation: background_fade 1.4s both;
+	-o-animation: background_fade 1.4s both;
+	-ms-animation: background_fade 1.4s both;
+	animation: background_fade 1.4s both;
+	/* 	background: linear-gradient(rgba(0,0,10,1), rgba(37,36,77,1)) fixed; */
+}
+
+body {
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+	color: white;
+	font-size: 1em;
+	line-height: 1.5em;
+}
+
+header img {
+	margin-bottom: 0.5em;
+}
+
+.container {
+	position: absolute;
+	width: 600px;
+	height: 550px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-300px, -275px);
+	border-radius: 16px;
+}
+
+section {
+	padding: 48px;
+	-webkit-animation: zoom_1 1.3s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+	-moz-animation: zoom_1 1.3s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+	-o-animation: zoom_1 1.3s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+	-ms-animation: zoom_1 1.3s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+	animation: zoom_1 1.3s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+}
+
+.background,
+.background:before,
+.background:after {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+section,
+.background,
+.background:before,
+.background:after {
+	-webkit-animation-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000), ease-in-out;
+	-moz-animation-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000), ease-in-out;
+	-o-animation-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000), ease-in-out;
+	-ms-animation-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000), ease-in-out;
+	animation-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000), ease-in-out;
+	transform: transale3d(0, 0, 0);
+}
+
+.background:before,
+.background:after {
+	content: "";
+	width: 100%;
+	height: 100%;
+}
+
+.background {
+	z-index: 0;
+	background: url(assets/starfield/stars_1@1x.png) repeat 70% 75% fixed;
+	-webkit-animation: zoom_1 1.4s cubic-bezier(0.230, 1.000, 0.320, 1.000) both, pulse_1 16s 1.5s ease-in-out infinite alternate;
+	-moz-animation: zoom_1 1.4s cubic-bezier(0.230, 1.000, 0.320, 1.000) both, pulse_1 16s 1.5s ease-in-out infinite alternate;
+	-o-animation: zoom_1 1.4s cubic-bezier(0.230, 1.000, 0.320, 1.000) both, pulse_1 16s 1.5s ease-in-out infinite alternate;
+	-ms-animation: zoom_1 1.4s cubic-bezier(0.230, 1.000, 0.320, 1.000) both, pulse_1 16s 1.5s ease-in-out infinite alternate;
+	animation: zoom_1 1.4s cubic-bezier(0.230, 1.000, 0.320, 1.000) both, pulse_1 16s 1.5s ease-in-out infinite alternate;
+}
+
+.background:before {
+	z-index: 1;
+	background: url(assets/starfield/stars_2@1x.png) repeat 80% 85% fixed;
+	-webkit-animation: zoom_2 1.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both, pulse_2 20s 1.5s ease-in-out infinite alternate;
+	-moz-animation: zoom_2 1.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both, pulse_2 20s 1.5s ease-in-out infinite alternate;
+	-o-animation: zoom_2 1.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both, pulse_2 20s 1.5s ease-in-out infinite alternate;
+	-ms-animation: zoom_2 1.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both, pulse_2 20s 1.5s ease-in-out infinite alternate;
+	animation: zoom_2 1.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both, pulse_2 20s 1.5s ease-in-out infinite alternate;
+}
+
+.background:after {
+	z-index: 2;
+	background: url(assets/starfield/stars_3@1x.png) repeat 90% 95% fixed;
+	-webkit-animation: zoom_3 1.8s cubic-bezier(0.230, 1.000, 0.320, 1.000) both, pulse_3 16s 1.5s ease-in-out infinite alternate;
+	-moz-animation: zoom_3 1.8s cubic-bezier(0.230, 1.000, 0.320, 1.000) both, pulse_3 16s 1.5s ease-in-out infinite alternate;
+	-o-animation: zoom_3 1.8s cubic-bezier(0.230, 1.000, 0.320, 1.000) both, pulse_3 16s 1.5s ease-in-out infinite alternate;
+	-ms-animation: zoom_3 1.8s cubic-bezier(0.230, 1.000, 0.320, 1.000) both, pulse_3 16s 1.5s ease-in-out infinite alternate;
+	animation: zoom_3 1.8s cubic-bezier(0.230, 1.000, 0.320, 1.000) both, pulse_3 16s 1.5s ease-in-out infinite alternate;
+}
+
+h2,
+h3,
+h4,
+h5 {
+	line-height: 1.5em;
+}
+
+h1 {
+	font-size: 9em;
+	font-weight: 200;
+	line-height: 1em;
+	display: inline;
+}
+
+h2 {
+	font-size: 1.8em;
+	font-weight: 600;
+}
+
+h3 {
+	font-size: 1.4em;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 0.7);
+}
+
+h4 {
+	font-size: 1.2em;
+	font-weight: 600;
+}
+
+a {
+	color: rgba(55, 192, 198, 1);
+	transition: 0.1s ease-in-out;
+}
+
+a:hover {
+	color: white;
+}
+
+hr {
+	border: 1px solid rgba(55, 192, 198, 1);
+	width: 100%;
+	margin: 1em auto 1em auto;
+}
+
+footer {
+	position: relative;
+	margin-top: 1em;
+	min-height: 44px;
+	color: rgba(255, 255, 255, 0.5);
+	width: 100%;
+	bottom: 0;
+}
+
+footer img {
+	vertical-align: middle;
+	margin-right: 4px;
+}
+
+small {
+	font-size: 0.9em;
+}
+
+
+/* Animation definitions. */
+
+@keyframes object_fade {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes background_fade {
+	0% {
+		background-color: black;
+	}
+	100% {
+		background-color: rgba(79, 78, 161, 1);
+	}
+}
+
+@keyframes zoom_1 {
+	0% {
+		opacity: 0;
+		transform: scale(0.0);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1.0);
+	}
+}
+
+@keyframes zoom_2 {
+	0% {
+		opacity: 0;
+		transform: scale(-0.5);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1.0);
+	}
+}
+
+@keyframes zoom_3 {
+	0% {
+		opacity: 0;
+		transform: scale(-1);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1.0);
+	}
+}
+
+@keyframes pulse_1 {
+	0% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	50% {
+		opacity: 0.9;
+		transform: scale(0.99);
+	}
+	100% {
+		opacity: 0.7;
+		transform: scale(1);
+	}
+}
+
+@keyframes pulse_2 {
+	0% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	50% {
+		opacity: 0.8;
+		transform: scale(0.95);
+	}
+	100% {
+		opacity: 0.75;
+		transform: scale(1);
+	}
+}
+
+@keyframes pulse_3 {
+	0% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	50% {
+		opacity: 0.9;
+		transform: scale(0.85);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(0.9);
+	}
+}
+
+
+/* Media Query definitions, includes accessibility settings and device profiles. */
+
+@media screen and (max-width: 768px) {
+	.container {
+		width: 90%;
+		max-width: 600px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		margin: auto;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.container {
+		position: relative;
+		width: 100%;
+		top: 0;
+		left: 0;
+		transform: translate(0, 0);
+	}
+	section {
+		padding: 48px;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	section {
+		padding: 32px;
+	}
+}
+
+@media screen and (-ms-high-contrast: active) {
+	.background,
+	.background:before,
+	.background:after {
+		-webkit-animation: 0;
+		-moz-animation: 0;
+		-o-animation: 0;
+		-ms-animation: 0;
+		animation: 0;
+		visibility: hidden;
+	}
+}
+
+@media screen and (-ms-high-contrast: black-on-white) {
+	html,
+	body {
+		color: black !important;
+		background-color: white !important;
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5 {
+		color: black;
+	}
+	hr {
+		border: 1px solid black;
+	}
+	html {
+		-webkit-animation: 0;
+		-moz-animation: 0;
+		-o-animation: 0;
+		-ms-animation: 0;
+		animation: 0;
+		background-color: white;
+	}
+}
+
+@media screen and (-ms-high-contrast: white-on-black) {
+	html,
+	body {
+		color: white !important;
+		background-color: black !important;
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5 {
+		color: white;
+	}
+	hr {
+		border: 1px solid white;
+	}
+	html {
+		-webkit-animation: 0;
+		-moz-animation: 0;
+		-o-animation: 0;
+		-ms-animation: 0;
+		animation: 0;
+		background-color: black;
+	}
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.25),
+only screen and ( min--moz-device-pixel-ratio: 1.25),
+only screen and ( -o-min-device-pixel-ratio: 1.25/1),
+only screen and ( min-device-pixel-ratio: 1.25),
+only screen and ( min-resolution: 200dpi),
+only screen and ( min-resolution: 1.25dppx) {
+	.background {
+		background: url(assets/starfield/stars_1@2x.png) repeat 70% 75%;
+		background-size: 100%;
+	}
+	.background:before {
+		background: url(assets/starfield/stars_2@2x.png) repeat 80% 85%;
+		background-size: 100%;
+	}
+	.background:after {
+		background: url(assets/starfield/stars_3@3x.png) repeat 90% 95%;
+		background-size: 100%;
+	}
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.25),
+only screen and ( min--moz-device-pixel-ratio: 1.25),
+only screen and ( -o-min-device-pixel-ratio: 1.25/1),
+only screen and ( min-device-pixel-ratio: 1.25),
+only screen and ( min-resolution: 300dpi),
+only screen and ( min-resolution: 1.25dppx) {
+	.background {
+		background: url(assets/starfield/stars_1@3x.png) repeat 70% 75%;
+		background-size: 100%;
+	}
+	.background:before {
+		background: url(assets/starfield/stars_2@3x.png) repeat 80% 85%;
+		background-size: 100%;
+	}
+	.background:after {
+		background: url(assets/starfield/stars_3@3x.png) repeat 90% 95%;
+		background-size: 100%;
+	}
+}
+
+@media (prefers-reduced-motion) {
+	section,
+	.container,
+	.background,
+	.background:before,
+	.background:after {
+		-webkit-animation: 0;
+		-moz-animation: 0;
+		-o-animation: 0;
+		-ms-animation: 0;
+		animation: 0;
+	}
+	section,
+	.container,
+	.background,
+	.background:before,
+	.background:after {
+		-webkit-animation: object_fade 1000ms ease-in-out both;
+		-moz-animation: object_fade 1000ms ease-in-out both;
+		-o-animation: object_fade 1000ms ease-in-out both;
+		-ms-animation: object_fade 1000ms ease-in-out both;
+		animation: object_fade 1000ms ease-in-out both;
+	}
+}
